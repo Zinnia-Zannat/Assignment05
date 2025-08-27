@@ -106,10 +106,12 @@
                             <img class="h-5 w-5" src="./assets/clock.png" alt="">
                             Call History
                         </div>
-                        <button id="" class="py-4 px-9 bg-[#00a63e] rounded-full text-white hind-madurai-semibold">Clear</button>
+                        <button id="btn-clear" class="py-4 px-9 bg-[#00a63e] rounded-full text-white hind-madurai-semibold">Clear</button>
                     </div>
 
-                    <ul class=""></ul>
+                    <div id="call-history">
+
+                    </div>
 
                     
                 </div>
@@ -117,41 +119,6 @@
         </section>
     </main>
     
-    <script>
-        let heartCount = 0;
-
-        // from navbar
-        const heartCountElement = document.getElementById('heartCount');
-        // console.log(heartCountElement);
-
-        // heart button count
-        const hearts = document.querySelectorAll('.btn-heart');
-        for (const heart of hearts) {
-            heart.addEventListener('click', function() {
-                // console.log(heart);
-                heartCount++;
-                heartCountElement.innerText = heartCount;
-            });
-        }
-
-        // copy button count
-        let copyCount = 0;
-
-        // from navbar
-        const copyCountElement = document.getElementById('copyCount');
-        
-        const copies = document.querySelectorAll('.btn-copy');
-        for (const copy of copies) {
-            copy.addEventListener('click', function() {
-                // console.log(copy);
-                copyCount++;
-                copyCountElement.innerText = copyCount;
-            });
-        }
-
-        
-        
-
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
