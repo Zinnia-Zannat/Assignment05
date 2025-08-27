@@ -55,17 +55,17 @@
             </div>
             <div class="flex items-center space-x-6">
                 <div class="flex items-center space-2 gap-2 bg-[#41FF6B10] rounded-full px-3 py-1.5">
-                    <span class="text-[16px] font-bold">0</span>
+                    <span id="heartCount" class="text-[16px] font-bold">0</span>
                     <img class="h-7 w-7" src="./assets/heart.png" alt="">
                 </div>
                 <div class="flex items-center space-2 gap-2 bg-[#41FF6B10] rounded-full px-3 py-1.5">
-                    <span class="text-[16px] font-bold">100</span>
+                    <span id="coinCount" class="text-[16px] font-bold">100</span>
                     <img class="h-7 w-7" src="./assets/coin.png" alt="">
                 </div>
-                <button class="text-white bg-[#00A63E] rounded-full px-4 py-1.5 text-[16px] font-bold" disabled><span>0</span> Copy</button>
+                <button class="text-white bg-[#00A63E] rounded-full px-4 py-1.5 text-[16px] font-bold" disabled><span id="copyCount">0</span> Copy</button>
             </div>
         </nav>
-        <div class="bg-gradient-to-b from-[#013223] to-[#006747] py-8 px-4 mx-auto">
+        <div class="bg-gradient-to-b from-[#013223] via-[#006747] to-[#013223] py-8 px-4 mx-auto">
             <div class=" text-white  flex flex-col items-center text-center gap-3">
                 <div class="flex items-center justify-center">
                 <img class="w-20 h-20" src="./assets/logo-dark.png" alt="">  
@@ -78,143 +78,24 @@
     <main class="">
          <section class="bg-[#f5fff6] grid grid-cols-1 md:grid-cols-12 gap-7 pt-12 pb-22 mx-auto">
             <!-- card-container -->
-            <section class="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 ">
+            <section id="cards" class="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 ">
                 <!-- card-1 -->
                 <div class="shadow-sm bg-white rounded-xl p-6 sm:p-8">
                     <div class="flex justify-between items-center mb-4">
                         <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/emergency.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
+                        <button class="btn-heart text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
                     </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">জাতীয় জরুরি সেবা</h3>
+                    <h3 class="service-name hind-madurai-bold text-2xl sm:text-2xl">জাতীয় জরুরি সেবা</h3>
                     <p class="hind-madurai-regular text-lg text-[#5c5c5c]">National Emergency</p>
 
-                    <h2 class="hind-madurai-bold sm:text-3xl text-3xl mt-6 text-[#111111]sm:text-3xl">999</h2>
+                    <h2 class="hotline hind-madurai-bold sm:text-3xl text-3xl mt-6 text-[#111111]sm:text-3xl">999</h2>
                     <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full ">জরুরি</p>
                     <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
+                        <button class="btn-copy text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
+                        <button class="btn-call flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
                     </div>
                 </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#DFEFFF] rounded-2xl p-4 box-content" src="./assets/police.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">পুলিশ</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Police</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">999</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">পুলিশ</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/fire-service.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">ফায়ার সার্ভিস</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Fire Service</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">999</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">ফায়ার</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/ambulance.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">অ্যাম্বুলেন্স</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Ambulance</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">1994-999999</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">স্বাস্থ্য</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/emergency.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">নারী ও শিশু সহায়তা</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Women & Child Helpline</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">109</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">সহায়তা</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/emergency.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl sm:text-2xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl">দুদক</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Anti-Corruption</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">106</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">সরকারি</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/emergency.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">বিদ্যুৎ বিভ্রাট</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Electricity Outage</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">16216</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">বিদ্যুৎ</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/brac.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">ব্র্যাক</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Brac</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">16445</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">এনজিও</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
-                <div class="shadow-sm bg-white rounded-xl p-8 sm:p-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <img class="w-8 h-8 bg-[#ffe3e2] rounded-2xl p-4 box-content" src="./assets/Bangladesh-Railway.png" alt="">
-                        <button class=" text-[#5c5c5c] text-xl"><img src="./assets/Vector (1).png" alt=""></button>
-                    </div>
-                    <h3 class="hind-madurai-bold text-2xl sm:text-2xl">বাংলাদেশ রেলওয়ে</h3>
-                    <p class="hind-madurai-regular text-lg text-[#5c5c5c]">Bangladesh Railway</p>
-
-                    <h2 class="hind-madurai-bold text-3xl mt-6 text-[#111111] sm:text-3xl">163</h2>
-                    <p class="hind-madurai-regular text-[#5c5c5c] bg-[#f2f2f2] w-max px-4 py-2 rounded-full">পরিবহন</p>
-                    <div class="mt-6 flex gap-2">
-                        <button id="" class="text-base flex justify-center items-center text-center border border-[#d4d6d5] text-[#5c5c5c] gap-2 rounded-lg py-2 px-4 w-full"><img src="./assets/copy.png" alt="">Copy</button>
-                        <button id="" class="flex justify-center items-center text-center bg-[#00a63e] text-white rounded-lg py-2 gap-2 px-4 w-full"><img src="./assets/Vector.png" alt="">Call</button>
-                    </div>
-                </div>
+                
                 
             </section>
 
@@ -237,7 +118,40 @@
     </main>
     
     <script>
+        let heartCount = 0;
+
+        // from navbar
+        const heartCountElement = document.getElementById('heartCount');
+        // console.log(heartCountElement);
+
+        // heart button count
+        const hearts = document.querySelectorAll('.btn-heart');
+        for (const heart of hearts) {
+            heart.addEventListener('click', function() {
+                // console.log(heart);
+                heartCount++;
+                heartCountElement.innerText = heartCount;
+            });
+        }
+
+        // copy button count
+        let copyCount = 0;
+
+        // from navbar
+        const copyCountElement = document.getElementById('copyCount');
         
+        const copies = document.querySelectorAll('.btn-copy');
+        for (const copy of copies) {
+            copy.addEventListener('click', function() {
+                // console.log(copy);
+                copyCount++;
+                copyCountElement.innerText = copyCount;
+            });
+        }
+
+        
+        
+
     </script>
 </body>
 </html>
