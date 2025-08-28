@@ -22,10 +22,14 @@ let heartCount = 0;
     
     const copies = document.querySelectorAll('.btn-copy');
     for (const copy of copies) {
-        copy.addEventListener('click', function() {
+        copy.addEventListener('click', function(event) {
             // console.log(copy);
-                const hotlineElement = document.querySelector('.hotline').innerText;navigator.clipboard.writeText(hotlineElement);
-            alert('number copied');
+            const hotlineElement = event.target.parentNode.parentNode.querySelector('.hotline').innerText;
+                
+                navigator.clipboard.writeText(hotlineElement);
+                // console.log(hotlineElement);
+
+            alert(`${hotlineElement} copied`);
             copyCount++;
             copyCountElement.innerText = copyCount;
         });
@@ -56,7 +60,7 @@ let heartCount = 0;
                 return;
             }
             else{
-                alert(`Calling ${serviceName} at ${hotline}`);
+                alert(`Calling ${serviceName} : ${hotline}`);
                 
                 coin -= 20;
                 coinCountElement.innerText = coin;
