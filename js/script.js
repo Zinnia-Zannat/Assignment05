@@ -24,6 +24,8 @@ let heartCount = 0;
     for (const copy of copies) {
         copy.addEventListener('click', function() {
             // console.log(copy);
+                const hotlineElement = document.querySelector('.hotline').innerText;navigator.clipboard.writeText(hotlineElement);
+            alert('number copied');
             copyCount++;
             copyCountElement.innerText = copyCount;
         });
@@ -37,6 +39,7 @@ let heartCount = 0;
     // from navbar
     const callCountElement = document.getElementById('callCount');
     const coinCountElement = document.getElementById('coinCount');
+    
     const history = document.getElementById('call-history');
     const clearBtn = document.getElementById('btn-clear');
 
