@@ -2,22 +2,22 @@
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
 **getElementById:
-It has an ID for returning one element.
+select one Element by id.
 
 **getElementsByClassName:
-It has a classname for returning multiple elements.
+select multiple elements by classname.
 
 **querySelector:
-It has a classname, it works like a CSS selector for returning one element.it select first classname only.
+select only first match by classname.
 
 **querySelectorAll:
-It has a classname, it works like a CSS selector for returning multiple elements.it select all classname and apply function.
+select multiple matches by classname.
 
 
 2. How do you **create and insert a new element into the DOM**?
 
 1.Create element.
-2.Inner text or inner html set.
+2.Set inner text or inner html.
 3.Append child that created element.
 
 3. What is **Event Bubbling** and how does it work?
